@@ -1,0 +1,19 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "pocketLDAP\n\n\nComponents\n\n\n\n\nOpenLDAP slapd\n as the LDAP daemon\n\n\nldap3\n as the Python bindings for the API\n\n\nFlask API\n as the API framework\n\n\ndocker\n as the packaging",
+            "title": "Home"
+        },
+        {
+            "location": "/#pocketldap",
+            "text": "",
+            "title": "pocketLDAP"
+        },
+        {
+            "location": "/#components",
+            "text": "OpenLDAP slapd  as the LDAP daemon  ldap3  as the Python bindings for the API  Flask API  as the API framework  docker  as the packaging",
+            "title": "Components"
+        }
+    ]
+}
