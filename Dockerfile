@@ -15,3 +15,9 @@ RUN install_packages slapd \
 ADD requirements.txt /tmp/
 RUN pip3 install -U pip
 RUN pip3 install -r /tmp/requirements.txt
+
+RUN mkdir /npi
+ADD api /npi/api/
+
+ENTRYPOINT ["python3"]
+CMD ["/npi/api/pldapi.py"]
