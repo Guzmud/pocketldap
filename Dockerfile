@@ -1,6 +1,3 @@
-# Use bitnami/minideb
-# sources: https://github.com/bitnami/minideb
-
 FROM bitnami/minideb:stretch
 MAINTAINER Guzmud <guzmud@nopunkintended.net>
 
@@ -17,7 +14,11 @@ RUN pip3 install -U pip
 RUN pip3 install -r /tmp/requirements.txt
 
 RUN mkdir /npi
+ADD slapd /npi/slapd/
 ADD api /npi/api/
+ADD supervisor /etc/supervisor/
 
-ENTRYPOINT ["python3"]
-CMD ["/npi/api/pldapi.py"]
+# spoiler: next line is ugly
+RUN service slapd stop
+
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf", "--nodaemon"]
