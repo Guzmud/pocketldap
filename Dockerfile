@@ -1,5 +1,5 @@
 FROM bitnami/minideb:stretch
-MAINTAINER Guzmud <guzmud@nopunkintended.net>
+LABEL maintainer="guzmud"
 
 WORKDIR /tmp
 

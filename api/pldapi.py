@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 
-from flask import request
-from flask_api import FlaskAPI
-
-app = FlaskAPI(__name__)
+from apistar import App, Route
 
 
-@app.route("/", methods=['GET',])
 def hello_world():
-    return {'request data': request.data, }
+    return {'text': 'Hello, world!'}
 
+
+routes = [
+    Route('/', method='GET', handler=hello_world),
+]
+
+app = App(routes=routes)
 
 if __name__ == "__main__":
-    app.run(debug=True,
-            host='0.0.0.0',
-            port=8050)
+    app.serve(debug=True,
+              host='0.0.0.0',
+              port=8050)
 

@@ -1,6 +1,6 @@
 # pocketLDAP
 
-slapd running in a Docker container with a Flask API app for interface.
+slapd running in a Docker container with an apistar app for interface.
 
 
 ## Requirements
@@ -12,6 +12,5 @@ slapd running in a Docker container with a Flask API app for interface.
 
 * [Minideb](https://github.com/bitnami/minideb)
 * [OpenLDAP](https://www.openldap.org)
-* [Flask](https://github.com/pallets/flask)
-* [Flask API](https://github.com/flask-api/flask-api)
+* [apistar](https://github.com/encode/apistar)
 * [ldap3](https://github.com/cannatag/ldap3)
