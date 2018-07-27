@@ -7,6 +7,8 @@ RUN install_packages slapd \
                      python3 \
                      python3-pip \
                      python3-setuptools \
+                     python3-dev \
+                     build-essential \
                      supervisor
 
 ADD requirements.txt /tmp/
@@ -20,5 +22,6 @@ ADD supervisor /etc/supervisor/
 
 # spoiler: next line is ugly
 RUN service slapd stop
+EXPOSE 80/tcp
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf", "--nodaemon"]

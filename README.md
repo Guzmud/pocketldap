@@ -1,6 +1,6 @@
 # pocketLDAP
 
-slapd running in a Docker container with an apistar app for interface.
+slapd running in a Docker container with hug for interface.
 
 
 ## Requirements
@@ -12,5 +12,5 @@ slapd running in a Docker container with an apistar app for interface.
 
 * [Minideb](https://github.com/bitnami/minideb)
 * [OpenLDAP](https://www.openldap.org)
-* [apistar](https://github.com/encode/apistar)
+* [hug](https://github.com/timothycrosley/hug)
 * [ldap3](https://github.com/cannatag/ldap3)
