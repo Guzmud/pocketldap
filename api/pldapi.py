@@ -2,10 +2,13 @@
 
 import hug
 
+from ldap_wrap import ldap_conn
+
 
 @hug.cli()
 @hug.local()
 @hug.get()
-def hello_world():
-    return {'text': 'Hello, world!'}
+def conn_info():
+    with ldap_conn(anon=True) as conn:
+        return {'conn': str(conn)}
 

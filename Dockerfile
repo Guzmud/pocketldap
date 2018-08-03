@@ -17,6 +17,7 @@ RUN pip3 install -r /tmp/requirements.txt
 
 RUN mkdir /npi
 ADD slapd /npi/slapd/
+ADD ldap /npi/ldap/
 ADD api /npi/api/
 ADD supervisor /etc/supervisor/
 
