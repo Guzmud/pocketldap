@@ -11,18 +11,19 @@ RUN install_packages slapd \
                      build-essential \
                      supervisor
 
+# spoiler: next line is ugly
+RUN service slapd stop
+
 ADD requirements.txt /tmp/
 RUN pip3 install -U pip
 RUN pip3 install -r /tmp/requirements.txt
 
-RUN mkdir /npi
-ADD slapd /npi/slapd/
-ADD ldap /npi/ldap/
+RUN rm -r /etc/ldap/slapd.d/
+ADD slapd.d /etc/ldap/slapd.d/
 ADD api /npi/api/
 ADD supervisor /etc/supervisor/
+RUN mkdir -p /npi/pldap
 
-# spoiler: next line is ugly
-RUN service slapd stop
 EXPOSE 80/tcp
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf", "--nodaemon"]

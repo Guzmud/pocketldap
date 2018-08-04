@@ -1,8 +1,8 @@
 # AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
-# CRC32 e058d391
-dn: cn={3}inetorgperson
+# CRC32 3615fb0f
+dn: cn={2}inetorgperson
 objectClass: olcSchemaConfig
-cn: {3}inetorgperson
+cn: {2}inetorgperson
 olcAttributeTypes: {0}( 2.16.840.1.113730.3.1.1 NAME 'carLicense' DESC 'RFC2
  798: vehicle license or registration plate' EQUALITY caseIgnoreMatch SUBSTR
   caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
@@ -41,9 +41,9 @@ olcObjectClasses: {0}( 2.16.840.1.113730.3.2.2 NAME 'inetOrgPerson' DESC 'RF
  r $ photo $ roomNumber $ secretary $ uid $ userCertificate $ x500uniqueIden
  tifier $ preferredLanguage $ userSMIMECertificate $ userPKCS12 ) )
 structuralObjectClass: olcSchemaConfig
-entryUUID: e64733b4-2799-1038-8e2b-af84584a4663
-creatorsName: cn=admin,cn=config
-createTimestamp: 20180729164051Z
-entryCSN: 20180729164051.770221Z#000000#000#000000
-modifiersName: cn=admin,cn=config
-modifyTimestamp: 20180729164051Z
+entryUUID: 6993de86-2c34-1038-854a-977cbff7c1d5
+creatorsName: cn=config
+createTimestamp: 20180804131659Z
+entryCSN: 20180804131659.198653Z#000000#000#000000
+modifiersName: cn=config
+modifyTimestamp: 20180804131659Z

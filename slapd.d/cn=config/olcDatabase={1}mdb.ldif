@@ -5,13 +5,13 @@ objectClass: olcDatabaseConfig
 objectClass: olcMdbConfig
 olcDatabase: {1}mdb
 olcDbDirectory: /var/lib/ldap
-olcSuffix: dc=ovh,dc=net
+olcSuffix: dc=pldap
 olcAccess: {0}to attrs=userPassword by self write by anonymous auth by * non
  e
 olcAccess: {1}to attrs=shadowLastChange by self write by * read
 olcAccess: {2}to * by * read
 olcLastMod: TRUE
-olcRootDN: cn=admin,dc=ovh,dc=net
+olcRootDN: cn=admin,dc=pldap
 olcRootPW:: e1NTSEF9QmlaTldOQjVBNVZ5VmJkVWhkOFZ0Vkh1QnFyU0w1ZVk=
 olcDbCheckpoint: 512 30
 olcDbIndex: objectClass eq
